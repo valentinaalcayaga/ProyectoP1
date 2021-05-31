@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/P1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="actualization tablas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,8 +69,16 @@
       <updated>1622426731260</updated>
       <workItem from="1622426759193" duration="202000" />
       <workItem from="1622427408521" duration="1271000" />
-      <workItem from="1622429969438" duration="1681000" />
+      <workItem from="1622429969438" duration="2342000" />
     </task>
+    <task id="LOCAL-00001" summary="actualization tablas">
+      <created>1622434346532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622434346532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +95,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="actualization tablas" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualization tablas" />
   </component>
 </project>
