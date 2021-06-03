@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 class Usuario(models.Model):
     correo = models.CharField(max_length=50, null=False, blank=False, primary_key=True, verbose_name="Ingrese correo")
@@ -10,8 +9,9 @@ class Usuario(models.Model):
     class Meta:
         abstract = True
 
+
 class Administrador(Usuario):
-    modificar= models.CharField (max_length=10, null=False, blank=False)
+    modificar = models.CharField(max_length=10, null=False, blank=False)
 
 
 class Profesor(Usuario):
@@ -22,7 +22,7 @@ class Profesor(Usuario):
 
 
 class Alumno(Usuario):
-    notas = models.FloatField(max_length=50, null=False, blank=False)
+    notas = models.CharField(max_length=50, null=False, blank=False)
     asistencia = models.CharField(max_length=50, null=False, blank=False)
 
     def __str__(self):
