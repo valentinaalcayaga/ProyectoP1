@@ -25,27 +25,18 @@
           </thead>
           <tbody>
 
+    {% for registro in listaAlumnos %}
 
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
+              <th> {{ registro.correo }}</th>
+              <td> {{ hh }} </td>
+              <td>{{ hh }}</td>
+              <td>{{ hh }}</td>
+              <td>{{ hh }}</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
+
+    {% endfor %}
+
           </tbody>
 
 

@@ -5,7 +5,8 @@ from app1.views import *
 urlpatterns = [
     path('', Ejemplo),
     path('nuevo/', Ejemplo2, name='nuevo'),
-    path('alumno/', listaAlumnos, name='alumno')
+    path('alumno/', listaAlumnos, name='alumno'),
+
 
 
 

@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class Usuario(models.Model):
     correo = models.CharField(max_length=50, null=False, blank=False, primary_key=True, verbose_name="Ingrese correo")
     nombre = models.CharField(max_length=50, null=False, blank=False, verbose_name="Ingrese nombre completo")
