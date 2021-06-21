@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Usuario(models.Model):
@@ -12,7 +13,10 @@ class Usuario(models.Model):
 
 
 class Administrador(Usuario):
-    modificar = models.CharField(max_length=10, null=False, blank=False)
+    pass
+
+    def __str__(self):
+        return self.nombre
 
 
 class Profesor(Usuario):
@@ -27,7 +31,7 @@ class Alumno(Usuario):
     asistencia = models.CharField(max_length=50, null=False, blank=False)
 
     def __str__(self):
-        return self.nombre + " - " + self.nombreCurso
+        return self.nombre
 
 
 class Asignatura(models.Model):
