@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="modelo general interfaz y log in">
+    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="actualizacion tablas y base de datos">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/P1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/migrations/0002_auto_20210601_2035.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/alumno.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alumno.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +194,8 @@
       <workItem from="1623328850548" duration="194000" />
       <workItem from="1623858176835" duration="469000" />
       <workItem from="1623878043715" duration="3225000" />
+      <workItem from="1624245103131" duration="716000" />
+      <workItem from="1624486392690" duration="1820000" />
     </task>
     <task id="LOCAL-00001" summary="actualization tablas">
       <created>1622434346532</created>
@@ -231,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623115647297</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="actualizacion tablas y base de datos">
+      <created>1624245425129</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624245425129</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +264,8 @@
     <MESSAGE value="actualization html y tablas" />
     <MESSAGE value="actualization html y tablas 2" />
     <MESSAGE value="modelo general interfaz y log in" />
-    <option name="LAST_COMMIT_MESSAGE" value="modelo general interfaz y log in" />
+    <MESSAGE value="actualizacion tablas y base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion tablas y base de datos" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1$settings.coverage" NAME="settings Coverage Results" MODIFIED="1622601786871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/P1" />
