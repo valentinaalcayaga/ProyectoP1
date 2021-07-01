@@ -4,7 +4,9 @@ from django.db import models
 # Create your models here.
 
 class Usuario(models.Model):
-    correo = models.CharField(max_length=50, null=False, blank=False, primary_key=True, verbose_name="Ingrese correo")
+    rut = models.CharField(max_length=12, null=False, blank=False, primary_key=True, verbose_name="Ingrese rut sin "
+                                                                                                  "guion")
+    correo = models.CharField(max_length=50, null=False, blank=False, verbose_name="Ingrese correo")
     nombre = models.CharField(max_length=50, null=False, blank=False, verbose_name="Ingrese nombre completo")
     contraseña = models.CharField(max_length=50, null=False, blank=False)
 
@@ -27,7 +29,6 @@ class Profesor(Usuario):
 
 
 class Alumno(Usuario):
-    notas = models.CharField(max_length=50, null=False, blank=False)
     asistencia = models.CharField(max_length=50, null=False, blank=False)
 
     def __str__(self):
@@ -37,11 +38,15 @@ class Alumno(Usuario):
 class Asignatura(models.Model):
     codigo = models.CharField(max_length=5, null=False, blank=False, primary_key=True)
     nombreAsignatura = models.CharField(max_length=20, null=False, blank=False)
-
     profesor = models.ForeignKey(Profesor, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.codigo + " - " + self.nombreAsignatura + " - " + self.profesor.nombre
+
+
+class Notas(models.Model):
+    notaAlumno = models.ForeignKey(Alumno, null=True, on_delete=models.SET_NULL)
+    notaAsignatura = models.ForeignKey(Asignatura, null=True, on_delete=models.SET_NULL)
 
 
 class Curso(models.Model):

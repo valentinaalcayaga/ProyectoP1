@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    <div class="container text-center bg-white ">
+
+            <form method="post">
+            {% csrf_token %}
+
+                <div class="form-group">
+
+                    {% for atributo in form.visible_fields %}
+                        <div class="form-group">
+                        {{ atributo.label_tag }}
+                        {{ atributo }}
+
+                        </div>
+                    
+                    {% endfor %}
+
+                </div>
+
+            <button> Agregar Alumno</button>
+            </form>
+
+    </div>
+
+{% endblock %}

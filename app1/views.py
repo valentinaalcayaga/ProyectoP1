@@ -1,18 +1,51 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
-from app1.models import Alumno
+from app1.form import *
+from app1.models import *
 
 
 def Ejemplo(request):
     return render(request, "home.html")
 
 
-def Ejemplo2(request):
-    return render(request, 'nuevo.html')
+def listaCursos(request):
+    datos1 = {'listaCursos': Curso.objects.all()}
+    return render(request, 'cursos.html', datos1)
 
 
 def listaAlumnos(request):
     datos = {'listaAlumnos': Alumno.objects.all()}
     return render(request, 'alumno.html', datos)
+
+
+def agregarAlumnos(request):
+    if request.method == 'POST':
+        formulario = AlumnoForm(request.POST)
+
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('alumno')
+
+    else:
+        formulario = AlumnoForm()
+
+    datos = {'form': formulario}
+    return render(request, 'agregarAlumnos.htm', datos)
+
+
+def editarAlumnos(request, rut_alumno):
+    alumno = Alumno.objects.get(rut=rut_alumno)
+
+    if request.method == "POST":
+        formulario = AlumnoForm(request, instance=alumno)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('alumno')
+
+    else:
+        formulario = AlumnoForm(instance=alumno)
+
+    datos = {'form': formulario}
+    return render(request, "editarAlumnos.html", datos)

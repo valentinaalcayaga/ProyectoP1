@@ -16,10 +16,11 @@
         <table class="table table-dark table-striped">
         <thead>
             <tr>
+              <th scope="col">Rut</th>
               <th scope="col">Correo</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Notas</th>
               <th scope="col">Asistencia</th>
+              <th scope="col">Contraseña</th>
               <th scope="col">Editar/Eliminar</th>
             </tr>
           </thead>
@@ -28,19 +29,24 @@
     {% for registro in listaAlumnos %}
 
             <tr>
-              <th> {{ registro.correo }}</th>
-              <td> {{ registro.nombre }} </td>
-              <td>{{ registro.notas }}</td>
+              <th> {{ registro.rut }}</th>
+              <td> {{ registro.correo }} </td>
+              <td>{{ registro.nombre }}</td>
               <td>{{ registro.asistencia}}</td>
               <td>{{ registro.contraseña }}</td>
+              <td> <a class="btn btn-primary btn-sm" href="{% url 'editarAlumnos' alumno.rut %}">Editar Alumno</a> </td>
+              <td> <a class="btn btn-danger btn-sm" href="{% url 'eliminarAlumnos' alumno.rut %}">Eliminar Almuno</a> </td>
+
             </tr>
 
     {% endfor %}
 
           </tbody>
-
-
         </table>
 
-{% endblock %}
+<a class="btn btn-primary" href="{% url 'agregarAlumnos' %}">Angregar Alumno</a> </td>
+
+
+
 </div>
+{% endblock %}
