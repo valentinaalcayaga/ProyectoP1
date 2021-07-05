@@ -11,8 +11,8 @@ def Ejemplo(request):
 
 
 def listaCursos(request):
-    datos1 = {'listaCursos': Curso.objects.all()}
-    return render(request, 'cursos.html', datos1)
+    datos = {'listaCursos': Curso.objects.all()}
+    return render(request, 'cursos.html', datos)
 
 
 def listaAlumnos(request):
@@ -21,7 +21,7 @@ def listaAlumnos(request):
 
 
 def agregarAlumnos(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         formulario = AlumnoForm(request.POST)
 
         if formulario.is_valid():
@@ -31,15 +31,16 @@ def agregarAlumnos(request):
     else:
         formulario = AlumnoForm()
 
-    datos = {'form': formulario}
-    return render(request, 'agregarAlumnos.htm', datos)
+    datos = {'form': formulario, }
+    return render(request, 'agregarAlumnos.html', datos)
 
 
 def editarAlumnos(request, rut_alumno):
     alumno = Alumno.objects.get(rut=rut_alumno)
 
     if request.method == "POST":
-        formulario = AlumnoForm(request, instance=alumno)
+        formulario = AlumnoForm(request.POST, instance=alumno)
+
         if formulario.is_valid():
             formulario.save()
             return redirect('alumno')
@@ -48,4 +49,10 @@ def editarAlumnos(request, rut_alumno):
         formulario = AlumnoForm(instance=alumno)
 
     datos = {'form': formulario}
-    return render(request, "editarAlumnos.html", datos)
+    return render(request, 'editarAlumnos.html', datos)
+
+
+def eliminarAlumnos(request, rut_alumno):
+    alumno = Alumno.objects.get(rut=rut_alumno)
+    alumno.delete()
+    return redirect('alumno')

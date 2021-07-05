@@ -4,8 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Usuario(models.Model):
-    rut = models.CharField(max_length=12, null=False, blank=False, primary_key=True, verbose_name="Ingrese rut sin "
-                                                                                                  "guion")
+    rut = models.CharField(max_length=12, null=False, blank=False, primary_key=True, verbose_name="Ingrese rut sin -")
     correo = models.CharField(max_length=50, null=False, blank=False, verbose_name="Ingrese correo")
     nombre = models.CharField(max_length=50, null=False, blank=False, verbose_name="Ingrese nombre completo")
     contraseña = models.CharField(max_length=50, null=False, blank=False)
@@ -45,8 +44,29 @@ class Asignatura(models.Model):
 
 
 class Notas(models.Model):
-    notaAlumno = models.ForeignKey(Alumno, null=True, on_delete=models.SET_NULL)
-    notaAsignatura = models.ForeignKey(Asignatura, null=True, on_delete=models.SET_NULL)
+    PRUEBA = '01'
+    CONTROL = '02'
+    TALLER = '03'
+    DIAGNOSTICO = '04'
+
+    EVALUACIONES_CHOICES = [
+        (PRUEBA, 'Prueba'),
+        (CONTROL, 'Control'),
+        (TALLER, 'Taller'),
+        (DIAGNOSTICO, 'Diagnostico'),
+    ]
+
+    alumno = models.ForeignKey(Alumno, null=True, on_delete=models.SET_NULL, verbose_name='Alumno')
+    asignatura = models.ForeignKey(Asignatura, null=True, on_delete=models.SET_NULL, verbose_name='Asignatura')
+    evaluacion = models.CharField(max_length=15, blank=True, null=True, verbose_name='Evaluación',
+                                  choices=EVALUACIONES_CHOICES, default=None)
+    nota_1 = models.FloatField(blank=True, null=True, verbose_name='Nota 1')
+    nota_2 = models.FloatField(blank=True, null=True, verbose_name='Nota 2')
+    nota_3 = models.FloatField(blank=True, null=True, verbose_name='Nota 3')
+    nota_4 = models.FloatField(blank=True, null=True, verbose_name='Nota 4')
+    nota_5 = models.FloatField(blank=True, null=True, verbose_name='Nota 5')
+    nota_6 = models.FloatField(blank=True, null=True, verbose_name='Nota 6')
+    promedio = models.FloatField(blank=True, null=True, verbose_name='Promedio')
 
 
 class Curso(models.Model):

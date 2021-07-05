@@ -5,7 +5,7 @@
 
     <div class="bg-white text-center" >
     <h1>LISTADO DE ALUMNOS</h1>
-    <p>Ejemplo de listado alumnos</p>
+    <p>Listado alumnos Listado cursos</p>
 
     </div>
 
@@ -34,8 +34,10 @@
               <td>{{ registro.nombre }}</td>
               <td>{{ registro.asistencia}}</td>
               <td>{{ registro.contraseña }}</td>
-              <td> <a class="btn btn-primary btn-sm" href="{% url 'editarAlumnos' alumno.rut %}">Editar Alumno</a> </td>
-              <td> <a class="btn btn-danger btn-sm" href="{% url 'eliminarAlumnos' alumno.rut %}">Eliminar Almuno</a> </td>
+              <td> <a class="btn btn-primary btn-sm" href="{% url 'editarAlumnos' registro.rut %}">Editar Alumno</a> </td>
+              <td> <a class="btn btn-danger btn-sm" href="{% url 'eliminarAlumnos' registro.rut %}">Eliminar Alumno</a> </td>
+
+
 
             </tr>
 
@@ -44,7 +46,7 @@
           </tbody>
         </table>
 
-<a class="btn btn-primary" href="{% url 'agregarAlumnos' %}">Angregar Alumno</a> </td>
+<a class="btn btn-block" href="{% url 'agregarAlumnos' %}">Angregar Alumno</a> </td>
 
 
 
