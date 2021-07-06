@@ -15,4 +15,6 @@ urlpatterns = [
 
     path('eliminarAlumnos/<rut_alumno>', eliminarAlumnos, name='eliminarAlumnos'),
 
+    path('notas/', listaNotas, name='notas'),
+
 ]

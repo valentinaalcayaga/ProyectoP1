@@ -4,13 +4,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="bg-white text-center">
-        <h1>Inicio de Sesión</h1>
-        <p>------</p>
+
+    <div class="bg-white text-center bg-transparent text-faded form-control-lg">
+
+        <p>Inicia sesion ingresando tu rut sin guion y tu clave</p>
     </div>
 
-    <div class="container bg-white">
-        <p><h2>Ingreso de Usuarios</h2></p>
+    <div class="container bg-white text-center" >
+        <p><h3>INICIO SESION</h3></p>
 
         <form method="post">
             {% csrf_token %}

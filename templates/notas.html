@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="bg-white text-center" >
+    <h1>LISTADO DE NOTAS</h1>
+    <p>notas por asignatura</p>
+
+     </div>
+
+<div class="table-bordered">
+  <table class="table">
+     <thead>
+    <tr>
+      <th scope="col">Materia</th>
+      <th scope="col">Nota 1</th>
+      <th scope="col">Nota 2</th>
+      <th scope="col">Nota 3</th>
+      <th scope="col">Nota 4</th>
+      <th scope="col">Nota 5</th>
+      <th scope="col">Nota 6</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    {% for registro in listaNotas %}
+
+    <tr>
+      <th scope="row">{{ registro.asignatura.nombreAsignatura }}</th>
+      <td>{{ registro.nota_1 }}</td>
+      <td>{{ registro.nota_2 }}</td>
+      <td>{{ registro.nota_3 }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+
+{% endfor %}
+
+  </table>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

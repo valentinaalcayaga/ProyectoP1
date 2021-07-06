@@ -68,6 +68,9 @@ class Notas(models.Model):
     nota_6 = models.FloatField(blank=True, null=True, verbose_name='Nota 6')
     promedio = models.FloatField(blank=True, null=True, verbose_name='Promedio')
 
+    def __str__(self):
+        return self.alumno.rut + " - " + self.alumno.nombre + " - " + self.evaluacion
+
 
 class Curso(models.Model):
     nombreCurso = models.CharField(max_length=10, null=False, blank=False, primary_key=True)

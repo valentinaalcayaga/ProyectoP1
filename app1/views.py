@@ -56,3 +56,8 @@ def eliminarAlumnos(request, rut_alumno):
     alumno = Alumno.objects.get(rut=rut_alumno)
     alumno.delete()
     return redirect('alumno')
+
+
+def listaNotas(request):
+    datos = {'listaNotas': Notas.objects.all()}
+    return render(request, 'notas.html', datos)
