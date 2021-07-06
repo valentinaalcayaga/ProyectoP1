@@ -17,4 +17,6 @@ urlpatterns = [
 
     path('notas/', listaNotas, name='notas'),
 
+    path('registroUsuarios/', registro_usuarios1, name='registro1'),
+
 ]

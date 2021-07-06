@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -61,3 +62,18 @@ def eliminarAlumnos(request, rut_alumno):
 def listaNotas(request):
     datos = {'listaNotas': Notas.objects.all()}
     return render(request, 'notas.html', datos)
+
+
+def registro_usuarios1(request):
+    if request.method != 'POST':
+        form = UserCreationForm()
+    else:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+
+    context = {'form': form}
+    return render(request, 'registration/registro1.html', context)
+
+

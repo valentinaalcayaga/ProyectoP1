@@ -55,9 +55,17 @@
                 <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="blog.html">Calendario</a>
           </li>
-                <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="blog.html">XXXXX</a>
+
+
+
+            {% if user.is_superuser %}
+                    <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'registro1' %}">Crear nuevo usuario</a>
           </li>
+            
+            {% endif %} 
+
+
 
               <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="{%  url 'logout' %}">Salir</a>

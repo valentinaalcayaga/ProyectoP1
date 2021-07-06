@@ -21,7 +21,10 @@
               <th scope="col">Nombre</th>
               <th scope="col">Asistencia</th>
               <th scope="col">Contraseña</th>
+
+                {% if user.is_superuser %}
               <th scope="col">Editar/Eliminar</th>
+                {% endif %}
             </tr>
           </thead>
           <tbody>
@@ -34,9 +37,11 @@
               <td>{{ registro.nombre }}</td>
               <td>{{ registro.asistencia}}</td>
               <td>{{ registro.contraseña }}</td>
+
+                {% if user.is_superuser %}
               <td> <a class="btn btn-primary btn-sm" href="{% url 'editarAlumnos' registro.rut %}">Editar Alumno</a> </td>
               <td> <a class="btn btn-danger btn-sm" href="{% url 'eliminarAlumnos' registro.rut %}">Eliminar Alumno</a> </td>
-
+                {% endif %}
 
 
             </tr>
@@ -46,7 +51,9 @@
           </tbody>
         </table>
 
+{% if user.is_superuser %}
 <a class="btn btn-block" href="{% url 'agregarAlumnos' %}">Angregar Alumno</a>
+{% endif %}
 
 
 
