@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="bg-white text-center">
+    <h2>TABLA DE ASISTENCIA POR ALUMNO</h2>
+    <p>visualizacion de cada asistencia por alumno</p>
+    </div>
+
+
+<div class="table-bordered">
+  <table class="table">
+     <thead>
+    <tr>
+
+        {% for registro in listaAsistencia %}
+      <th scope="col">Rut alumno</th>
+      <th scope="col"> {{ registro.fecha }}</th>
+     {% endfor %}
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for registro in listaAsistencia %}
+        <tr>
+          <th scope="row">{{registro.asistir }}</th>
+          <td> </td>
+
+        </tr>
+
+      </tbody>
+
+  {% endfor %}
+
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock  %}

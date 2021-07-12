@@ -11,9 +11,9 @@ def Ejemplo(request):
     return render(request, "home.html")
 
 
-def listaCursos(request):
-    datos = {'listaCursos': Curso.objects.all()}
-    return render(request, 'cursos.html', datos)
+def listaAsignaturas(request):
+    datos = {'listaAsignaturas': Asignatura.objects.all()}
+    return render(request, 'asignaturas.html', datos)
 
 
 def listaAlumnos(request):
@@ -62,6 +62,10 @@ def eliminarAlumnos(request, rut_alumno):
 def listaNotas(request):
     datos = {'listaNotas': Notas.objects.all()}
     return render(request, 'notas.html', datos)
+
+def listaAsistencia(request):
+    datos = {'listaAsistencia': Asistencia.objects.all()}
+    return render(request, 'asistencia.html', datos)
 
 
 def registro_usuarios1(request):

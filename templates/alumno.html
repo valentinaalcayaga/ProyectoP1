@@ -19,7 +19,6 @@
               <th scope="col">Rut</th>
               <th scope="col">Correo</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Asistencia</th>
               <th scope="col">Contraseña</th>
 
                 {% if user.is_superuser %}
@@ -30,15 +29,16 @@
           <tbody>
 
     {% for registro in listaAlumnos %}
-
             <tr>
+
               <th> {{ registro.rut }}</th>
               <td> {{ registro.correo }} </td>
               <td>{{ registro.nombre }}</td>
-              <td>{{ registro.asistencia}}</td>
+
+            {% if user.is_superuser %}
               <td>{{ registro.contraseña }}</td>
 
-                {% if user.is_superuser %}
+
               <td> <a class="btn btn-primary btn-sm" href="{% url 'editarAlumnos' registro.rut %}">Editar Alumno</a> </td>
               <td> <a class="btn btn-danger btn-sm" href="{% url 'eliminarAlumnos' registro.rut %}">Eliminar Alumno</a> </td>
                 {% endif %}

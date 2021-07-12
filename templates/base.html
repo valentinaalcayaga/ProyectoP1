@@ -21,7 +21,7 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower">Escuela EL EDEN</span>
+        <span class="site-heading-lower text-primary " >Escuela EL EDEN</span>
       </h1>
 
 
@@ -41,7 +41,7 @@
             {% if user.is_authenticated %}
 
                  <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'cursos' %}">Cursos</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'asignaturas' %}">Asignaturas</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'alumno' %}">Alumnos</a>
@@ -50,7 +50,7 @@
             <a class="nav-link text-uppercase text-expanded" href="{% url 'notas' %} ">Notas</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="blog.html">Asistencia</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'asistencia' %}">Asistencia</a>
           </li>
                 <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="blog.html">Calendario</a>
@@ -135,7 +135,6 @@
     <!-- Bootstrap -->
     <script src=" {% static 'app1/vendor/jquery/jquery.min.js' %} "></script>
     <script src=" {% static 'app1/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
-
 </body>
 
 

@@ -4,6 +4,7 @@
 
 
 {% block content %}
+
     <div class="container text-center bg-white ">
 
             <form method="post">
@@ -12,6 +13,7 @@
                 <div class="form-group">
 
                     {% for atributo in form.visible_fields %}
+
                         <div class="form-group">
                         {{ atributo.label_tag }}
                         {{ atributo }}

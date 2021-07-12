@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="actualizacion">
-      <change afterPath="$PROJECT_DIR$/templates/registration/registro1.html" afterDir="false" />
+    <list default="true" id="8c2c00cc-746c-4509-8bf7-f64edd2b6483" name="Default Changelist" comment="actualizacion pagina">
+      <change afterPath="$PROJECT_DIR$/app1/migrations/0002_auto_20210711_2332.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/asistencia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/migrations/0002_auto_20210705_0216.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/migrations/0003_auto_20210705_2304.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/static/app1/css/gestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app1/static/app1/css/gestion.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/alumno.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alumno.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cursos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/asignaturas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editarAlumnos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editarAlumnos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/notas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/notas.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +38,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1tHWwCeupM5hIggMxaarL1wm3Hi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -203,7 +220,9 @@
       <workItem from="1625281808576" duration="2791000" />
       <workItem from="1625515332511" duration="6343000" />
       <workItem from="1625531354999" duration="9258000" />
-      <workItem from="1625587006972" duration="3660000" />
+      <workItem from="1625587006972" duration="4114000" />
+      <workItem from="1625863130724" duration="6104000" />
+      <workItem from="1625981718564" duration="8442000" />
     </task>
     <task id="LOCAL-00001" summary="actualization tablas">
       <created>1622434346532</created>
@@ -282,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625552201797</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="actualizacion pagina">
+      <created>1625595352658</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1625595352658</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +338,8 @@
     <MESSAGE value="modificaciones tablas y web" />
     <MESSAGE value="modificaciones notas" />
     <MESSAGE value="actualizacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion" />
+    <MESSAGE value="actualizacion pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion pagina" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P1$settings.coverage" NAME="settings Coverage Results" MODIFIED="1622601786871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/P1" />

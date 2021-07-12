@@ -7,5 +7,6 @@ admin.site.register(Alumno)
 admin.site.register(Asignatura)
 admin.site.register(Curso)
 admin.site.register(Notas)
+admin.site.register(Asistencia)
 
 

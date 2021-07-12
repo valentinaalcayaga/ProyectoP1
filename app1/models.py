@@ -28,7 +28,7 @@ class Profesor(Usuario):
 
 
 class Alumno(Usuario):
-    asistencia = models.CharField(max_length=50, null=False, blank=False)
+    pass
 
     def __str__(self):
         return self.nombre
@@ -41,6 +41,7 @@ class Asignatura(models.Model):
 
     def __str__(self):
         return self.codigo + " - " + self.nombreAsignatura + " - " + self.profesor.nombre
+
 
 
 class Notas(models.Model):
@@ -75,3 +76,10 @@ class Notas(models.Model):
 class Curso(models.Model):
     nombreCurso = models.CharField(max_length=10, null=False, blank=False, primary_key=True)
     alumnos = models.ForeignKey(Alumno, null=True, on_delete=models.SET_NULL)
+
+class Asistencia(models.Model):
+    fecha = models.DateTimeField(primary_key= True, blank=False, verbose_name='Fecha')
+    opasistir = [("1", "presente"), ("2", "ausente")]
+    asistir = models.CharField(max_length=20, blank=False, null=True, choices=opasistir, verbose_name='Asistencia')
+    alumno = models.ForeignKey(Alumno, null=True, on_delete=models.SET_NULL, verbose_name='Alumno')
+    asignatura = models.ForeignKey(Asignatura, null=True, on_delete=models.SET_NULL, verbose_name='Asignatura')

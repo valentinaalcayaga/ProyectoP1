@@ -1,9 +1,9 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background: #ffffff;
+
+
+
 }
 
 h1,
@@ -80,7 +80,8 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(47, 139, 173, 0.8);
+  background-color:rgba(47, 139, 173, 0.8);
+
   font-family: 'Raleway';
 }
 
@@ -94,7 +95,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #ffffff;
+  color: #073cdb;
   text-decoration: underline;
 }
 
@@ -134,7 +135,7 @@ p {
     left: 600;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgba(47, 139, 173, 0.8);
+    background-color: rgb(163, 7, 12);
     color: cornsilk;
     position: absolute;
   }

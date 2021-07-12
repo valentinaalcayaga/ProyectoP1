@@ -2,10 +2,13 @@ from django.urls import path
 
 from app1.views import *
 
+
+
+
 urlpatterns = [
     path('', Ejemplo, name='Ejemplo'),
 
-    path('cursos/', listaCursos, name='cursos'),
+    path('asignaturas/', listaAsignaturas, name='asignaturas'),
 
     path('alumno/', listaAlumnos, name='alumno'),
 
@@ -18,5 +21,7 @@ urlpatterns = [
     path('notas/', listaNotas, name='notas'),
 
     path('registroUsuarios/', registro_usuarios1, name='registro1'),
+
+    path('asistencia/', listaAsistencia, name='asistencia'),
 
 ]
